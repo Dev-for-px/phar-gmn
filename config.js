@@ -3,7 +3,7 @@
 // ============================================================
 window.PHAR = {
   // Link do checkout da Cakto (produto principal)
-  checkout: "https://pay.cakto.com.br/SEU-CHECKOUT",
+  checkout: "https://pay.cakto.com.br/dtjx6qv_1232641",
 
   // Links do Raio-X (sistema de links). Cada página usa um, para saber de onde veio o lead.
   raioxObrigado: "https://links.pharconsultoria.com/raio-x-obrigado",
