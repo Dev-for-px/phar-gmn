@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Antes de ir: Raio-X gratuito | PHAR Consultoria</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+</head>
+<body>
+<div class="gbar"><span></span><span></span><span></span><span></span></div>
+
+<section class="dark" style="min-height:100vh">
+ <div class="wrap" style="max-width:760px;padding:50px 20px 70px">
+  <span class="tag">Espera, antes de ir</span>
+  <h1 style="font-size:clamp(30px,5.4vw,50px)">Tudo bem não comprar agora. <em>Mas você sabe onde está perdendo cliente?</em></h1>
+  <p class="lead">Faça o teste em 10 segundos. Marque o que é verdade hoje na sua empresa:</p>
+
+  <label class="check"><input type="checkbox" class="js-c"><span><b>Encontrado:</b> quando pesquisam o que você vende na sua cidade, você aparece no Google, no Maps e no ChatGPT.</span></label>
+  <label class="check"><input type="checkbox" class="js-c"><span><b>Escolhido:</b> suas avaliações convencem mais que as do concorrente do lado.</span></label>
+  <label class="check"><input type="checkbox" class="js-c"><span><b>Atendido:</b> quem chama no WhatsApp recebe resposta rápida e com follow-up.</span></label>
+  <label class="check"><input type="checkbox" class="js-c"><span><b>Lembrado:</b> quem comprou uma vez é chamado de novo.</span></label>
+
+  <p id="res" style="font-family:Poppins;font-weight:700;font-size:20px;color:var(--gold);margin:18px 0 6px">Ficou alguma em branco? É ali que o cliente está indo para o concorrente.</p>
+
+  <div class="card lightcard" style="background:#fff;color:var(--ink);margin-top:24px;border:0">
+   <h2 style="font-size:28px">Raio-X gratuito da sua empresa</h2>
+   <p style="color:var(--mut)">A gente pesquisa seu negócio como um cliente faria e te mostra, sem custo:</p>
+   <ul style="list-style:none;margin:16px 0">
+    <li style="padding:7px 0">✅ <b>Print de como você aparece hoje</b> no Google, no Maps e no ChatGPT, lado a lado com 3 concorrentes</li>
+    <li style="padding:7px 0">✅ <b>Nota de 0 a 10</b> em cada uma das 4 etapas</li>
+    <li style="padding:7px 0">✅ <b>As 3 ações que mais trazem cliente</b> no seu caso</li>
+   </ul>
+   <a class="btn big js-raiox" href="#">Quero meu Raio-X gratuito →</a>
+   <p class="micro">Sem compromisso. Você só manda o nome da empresa, a cidade e o que vende.</p>
+  </div>
+
+  <p class="center" style="margin-top:30px;color:#9FB0C6;font-size:15px">Prefere aprender e fazer sozinho? <a class="js-checkout" href="#" style="color:var(--gold);font-weight:700">Voltar para o guia de R$ <span class="js-preco">47,90</span></a></p>
+ </div>
+</section>
+
+<script>
+(function(){
+ var C = window.PHAR || {}, qs = location.search;
+ document.querySelectorAll('.js-raiox').forEach(function(a){ a.href = C.raioxBack; a.target='_blank'; a.rel='noopener'; });
+ document.querySelectorAll('.js-checkout').forEach(function(a){ a.href = C.checkout + qs; });
+ document.querySelectorAll('.js-preco').forEach(function(e){ e.textContent = C.preco; });
+ var res = document.getElementById('res');
+ document.querySelectorAll('.js-c').forEach(function(c){ c.addEventListener('change', function(){
+  var n = document.querySelectorAll('.js-c:checked').length;
+  res.textContent = n === 4 ? 'Ótimo! Mesmo assim, o Raio-X mostra onde dá para ganhar ainda mais.'
+   : 'Você deixou ' + (4-n) + ' em branco. É ali que o cliente está indo para o concorrente.';
+ }); });
+})();
+</script>
+</body>
+</html>
