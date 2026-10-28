@@ -2,8 +2,8 @@
 // CONFIGURAÇÃO — edite só este arquivo para trocar links e cases
 // ============================================================
 window.PHAR = {
-  // Link do checkout da Cakto (produto principal)
-  checkout: "https://pay.cakto.com.br/dtjx6qv_1232641",
+  // Link curto do checkout (PHAR Links /guia -> Cakto)
+  checkout: "https://links.pharconsultoria.com/guia", // aponta para o checkout da Cakto (editar no PHAR Links)
 
   // Links do Raio-X (sistema de links). Cada página usa um, para saber de onde veio o lead.
   raioxObrigado: "https://links.pharconsultoria.com/raio-x-obrigado",
